@@ -1,168 +1,144 @@
 [
-	{
-		"title": "portfolio",
-		"content": [
-			{
-				"text_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit.  provident autem nisi recusandae impedit deserunt consequuntur fugit deleniti sequi aperiam aliquid.",
-				"img_url": "",
-				"url": ""
-			},
-			{
-				"text_content": "Provident autem nisi recusandae impedit deserunt consequuntur fugit deleniti sequi aperiam aliquid.",
-				"img_url": "",
-				"url": ""
-			},
-			{
-				"text_content": "Natus sapiente optio maxime non culpa dolore accusamus esse eveniet.",
-				"img_url": "",
-				"url": ""
-			}
-		]
-	},
-	{
-		"title": "skills",
-		"content": [
-			{
-				"skill": "front-end",
-				"subskill": [
-					{
-						"html/css/sass": "4",
-						"javascript": "3",
-						"angular/vuejs/react": "2",
-						"webpack": "2"
-					}
-				]
-			},
-			{
-				"skill": "back-end",
-				"subskill": [
-					{
-						"nodejs/electron": "2",
-						"php/wordpress": "3",
-						"symfony": "2",
-						"ruby on rails": "1",
-						"java": "1"
-					}
-				]
-			},
-			{
-				"skill": "mobile",
-				"subskill": [
-					{
-						"android": "2",
-						"progressive web app": "2"
-					}
-				]
-			},
-			{
-				"skill": "base de données",
-				"subskill": [
-					{
-						"sql": "2",
-						"mongoDB": "2",
-						"json": "2",
-						"firebase": "2"
-					}
-				]
-			},
-			{
-				"skill": "déploiement",
-				"subskill": [
-					{
-						"heroku": "3",
-						"github": "3"
-					}
-				]
-			},
-			{
-				"skill": "sécurité",
-				"subskill": [
-					{
-						"smsi/pssi/gestion de risque": "2",
-						"ebios": "2",
-						"owasp": "2",
-						"penstest": "2",
-						"forensic": "2",
-						"supervision": "1"
-					}
-				]
-			},
-			{
-				"skill": "langues",
-				"subskill": { "Anglais": "3" }
-			}
-		]
-	},
-	{
-		"title": "experience",
-		"content": [
-			{
-				"date_start": "",
-				"date_end": "2018",
-				"poste": "Développeuse web",
-				"entreprise": "Maquetting Agence Multimédia",
-				"mission": "Intégration d’email simple/responsive/ approuvé, bannières publicitaires, sites web WordPress pour des laboratoires pharmaceutiques."
-			},
-			{
-				"date_start": "",
-				"date_end": "2017",
-				"poste": "Développeuse",
-				"entreprise": "Orange CyberDéfense",
-				"mission": "Design, développement, d’une IHM en Html/CSS, JavaScript, PHP et ElectronJs."
-			},
-			{
-				"date_start": "",
-				"date_end": "2016",
-				"poste": "Développeuse web",
-				"entreprise": "Karine Conseil en Image",
-				"mission": "Design, développement avec le CMS Wordpress, et mise en production d’un site vitrine."
-			},
-			{
-				"date_start": "2007",
-				"date_end": "2011",
-				"poste": "Conseillère Clientèle Service Entreprises",
-				"entreprise": "Bouygues Télécom",
-				"mission": "Prise en charge des appels des clients professionnels, traitement des courriers/ fax/ mails, créations de lignes résiliées par erreur."
-			}
-		]
-	},
-	{
-		"title": "education",
-		"content": [
-			{
-				"date_start": "",
-				"date_end": "2019 ",
-				"training": "Progressives Web Application ",
-				"school": "SEIFR School"
-			},
-			{
-				"date_start": "",
-				"date_end": "2018",
-				"training": "Bachelor Développeur Fullstack",
-				"school": "3W Academy"
-			},
-			{
-				"date_start": "",
-				"date_end": "2017",
-				"training": "Master 2 Préventrice en cybersécurité",
-				"school": "CFA AFTI"
-			},
-			{
-				"date_start": "2014",
-				"date_end": "2015",
-				"training": "Chef de projet multimédia",
-				"school": "IESA Multimédia Paris"
-			},
-			{
-				"date_start": "",
-				"date_end": "2006",
-				"training": "DUT Techniques de Commercialisation",
-				"school": "IUT de Marne la Vallée"
-			}
-		]
-	},
-	{
-		"title": "passions",
-		"content": [ "yoga hastanga", "natation" ]
-	}
+    {
+        "title": "portfolio",
+        "content": [
+            {
+                "text_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit.  provident autem nisi recusandae impedit deserunt consequuntur fugit deleniti sequi aperiam aliquid.",
+                "img_url": ""
+            },
+            {
+                "text_content": "Provident autem nisi recusandae impedit deserunt consequuntur fugit deleniti sequi aperiam aliquid.",
+                "img_url": ""
+            },
+            {
+                "text_content": "Natus sapiente optio maxime non culpa dolore accusamus esse eveniet.",
+                "img_url": ""
+            }
+        ]
+    },
+    {
+        "title": "skills",
+        "content": [
+            {
+                "skill": "front-end",
+                "subskill": {
+                    "html/css/sass": 4,
+                    "javascript": 3,
+                    "angular/vuejs/react": 2,
+                    "webpack": 2
+                }
+            },
+            {
+                "skill": "back-end",
+                "subskill": {
+                    "nodejs/electron": 2,
+                    "php/wordpress": 3,
+                    "symfony": 2,
+                    "ruby on rails": 1,
+                    "java": 1
+                }
+            },
+            {
+                "skill": "mobile",
+                "subskill": {
+                    "android": 2,
+                    "progressive web app": 2
+                }
+            },
+            {
+                "skill": "base de données",
+                "subskill": {
+                    "sql": 2,
+                    "mongoDB": 2,
+                    "json": 2,
+                    "firebase": 2
+                }
+            },
+            {
+                "skill": "déploiement",
+                "subskill": {
+                    "heroku": 3,
+                    "github": 3
+                }
+            },
+            {
+                "skill": "sécurité",
+                "subskill": {
+                    "smsi/pssi/gestion de risque": 2,
+                    "ebios": 2,
+                    "owasp": 2,
+                    "penstest": 2,
+                    "forensic": 2,
+                    "supervision": 1
+                }
+            },
+            {
+                "skill": "langues",
+                "subskill": { "Anglais": 3 }
+            }
+        ]
+    },
+    {
+        "title": "experience",
+        "content": [
+            {
+                "dates": { "date_start": "", "date_end": "2018" },
+                "poste": "Développeuse web",
+                "entreprise": "Maquetting Agence Multimédia",
+                "mission": "Intégration d’email simple/responsive/ approuvé, bannières publicitaires, sites web WordPress pour des laboratoires pharmaceutiques."
+            },
+            {
+                "dates": { "date_start": "", "date_end": "2017" },
+                "poste": "Développeuse",
+                "entreprise": "Orange CyberDéfense",
+                "mission": "Design, développement, d’une IHM en Html/CSS, JavaScript, PHP et ElectronJs."
+            },
+            {
+                "dates": { "date_start": "", "date_end": "2016" },
+                "poste": "Développeuse web",
+                "entreprise": "Karine Conseil en Image",
+                "mission": "Design, développement avec le CMS Wordpress, et mise en production d’un site vitrine."
+            },
+            {
+                "dates": { "date_start": "2007", "date_end": "2011" },
+                "poste": "Conseillère Clientèle Service Entreprises",
+                "entreprise": "Bouygues Télécom",
+                "mission": "Prise en charge des appels des clients professionnels, traitement des courriers/ fax/ mails, créations de lignes résiliées par erreur."
+            }
+        ]
+    },
+    {
+        "title": "education",
+        "content": [
+            {
+                "dates": { "date_start": "", "date_end": "2019 " },
+                "training": "Progressives Web Application ",
+                "school": "SEIFR School"
+            },
+            {
+                "dates": { "date_start": "", "date_end": "2018" },
+                "training": "Bachelor Développeur Fullstack",
+                "school": "3W Academy"
+            },
+            {
+                "dates": { "date_start": "", "date_end": "2017" },
+                "training": "Master 2 Préventrice en cybersécurité",
+                "school": "CFA AFTI"
+            },
+            {
+                "dates": { "date_start": "2014", "date_end": "2015" },
+                "training": "Chef de projet multimédia",
+                "school": "IESA Multimédia Paris"
+            },
+            {
+                "dates": { "date_start": "", "date_end": "2006" },
+                "training": "DUT Techniques de Commercialisation",
+                "school": "IUT de Marne la Vallée"
+            }
+        ]
+    },
+    {
+        "title": "passions",
+        "content": ["yoga hastanga", "natation"]
+    }
 ]
