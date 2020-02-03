@@ -48,6 +48,11 @@ function getContent(content) {
         }
         const sublistItems = Object.entries(element).map(([key, value]) => {
             let contentValue = createNewElement('p')
+            if (key === 'img_url') {
+                const img = new Image()
+                img.src = element.img_url
+                return img
+            }
             if (key === 'skill') {
                 contentValue = createNewElement('h3')
             }
@@ -67,7 +72,9 @@ function getContent(content) {
                 contentValue.append(subskillItems)
             }
             if (key === 'dates') {
-                contentValue.append(`${element.dates.date_start} ${element.dates.date_end}`)
+                contentValue.append(
+                    `${element.dates.date_start} ${element.dates.date_end}`
+                )
             } else if (typeof value !== 'object') {
                 contentValue.append(value)
             }
@@ -86,10 +93,9 @@ function getRatings(value) {
 
     const stars = '*'.repeat(value).padEnd(5, '-')
 
-    return stars.split('').map(char =>
-      (char === '*' ?
-        yellowStar() :
-        greyStar()))
+    return stars
+        .split('')
+        .map(char => (char === '*' ? yellowStar() : greyStar()))
 }
 // create html structure of hero section
 function createSection(contentSection) {
