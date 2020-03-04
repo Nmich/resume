@@ -1,4 +1,57 @@
-h3{font-weight: 600;}
-ul.ul-skill li{
+h2.title, h3.subtitle, a.navbar-item {
+    color: #255f85;
+}
+.is-active{
+    color: #00a878 !important;
+}
+.yellow-star{
+    color: #255f85 !important;
+}
+.button.is-inverted {
+    background-color: #255f85 !important;
+}
+li {
+    list-style-type: none;
+}
+.hero .navbar {
+    background-color: white;
+}
+#home {
+    background-image: url(../img/christina-wocintechchat-com-zFd1L-XtrTE-unsplash-2.jpg);
+    background-position: left;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+#home h1,
+#home h2 {
+    color: #edae49 !important;
+}
+h3 {
+    font-weight: 600;
+}
+/* ul.ul-skill li {
     list-style-type: circle;
+} */
+
+.content-portfolio > .card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-self: flex-start;
+}
+.title-portfolio {
+    display: flex;
+    align-self: center;
+}
+#section-passions .hero-body {
+    padding-left: 0;
+    padding-right: 0;
+}
+#section-passions .container {
+    max-width: 100%;
+}
+#section-passions .is-marginless > h2 {
+    padding-left: 1.5rem !important;
+}
+#section-passions .content-passions {
+    margin: 0;
 }

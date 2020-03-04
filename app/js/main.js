@@ -30,38 +30,66 @@ function createCategory(categoryName, className, title) {
 
 // create title with parameters
 function getTitle(title) {
-    return createCategory('h2', 'title', title)
+    return createCategory('h2', 'title is-1 is-capitalized', title)
 }
 
 //create content with parameters
 function getContent(content) {
-    const newContent = createNewElement('div')
+    const newContent = createNewElement('div', '')
 
     const arrayContent = content.map(element => {
         const contentEl = createNewElement('div', 'column')
         //map on "content" of json and if it's strings, display it on ul>li elements
         if (typeof element === 'string') {
-            const itemEl = createNewElement('li')
-            itemEl.append(element)
+            // contentEl.classList.add('is-paddingless')
+            const itemEl = createNewElement('li', 'passions-element')
+            const passionsCard = createNewElement('div', 'card-image')
+
+            const img = new Image()
+            img.src = element
+            img.className = 'image'
+            passionsCard.append(img)
+            itemEl.append(passionsCard)
             contentEl.append(itemEl)
             return contentEl
         }
         const sublistItems = Object.entries(element).map(([key, value]) => {
-            let contentValue = createNewElement('p')
+            let contentValue = createNewElement('p', 'content-value')
             if (key === 'img_url') {
+                const cardImg = createNewElement('div', 'card-image')
                 const img = new Image()
                 img.src = element.img_url
-                return img
+                img.className = 'image'
+                cardImg.append(img)
+                return cardImg
+            }
+            if (key === 'text_content') {
+                contentValue.className =
+                    'portfolio-content content is-variable is-8'
+                contentEl.className = 'column is-full card is-shadowless'
             }
             if (key === 'skill') {
-                contentValue = createNewElement('h3')
+                contentValue = createNewElement(
+                    'h3',
+                    'subtitle is-3 is-capitalized'
+                )
             }
             if (key === 'subskill') {
-                const subskillItems = createNewElement('ul', 'ul-skill')
+                const subskillItems = createNewElement(
+                    'ul',
+                    'ul-skill has-text-white'
+                )
+                contentValue = createNewElement('div', 'content-skill-values')
                 const subArray = Object.entries(value).map(([key, value]) => {
-                    const arraySubskill = createNewElement('li')
-                    const keySubskill = createNewElement('p')
-                    const valueSubskill = createNewElement('p')
+                    const arraySubskill = createNewElement(
+                        'li',
+                        'columns is-mobile is-marginless is-vcentered content'
+                    )
+                    const keySubskill = createNewElement(
+                        'p',
+                        'column subtitle has-text-white'
+                    )
+                    const valueSubskill = createNewElement('p', 'column')
 
                     keySubskill.append(key)
                     valueSubskill.append(...getRatings(value))
@@ -88,8 +116,8 @@ function getContent(content) {
 }
 
 function getRatings(value) {
-    const yellowStar = () => createNewElement('span', 'fas  fa-star')
-    const greyStar = () => createNewElement('span', 'far  fa-star')
+    const yellowStar = () => createNewElement('span', 'yellow-star fas fa-star')
+    const greyStar = () => createNewElement('span', 'far fa-star')
 
     const stars = '*'.repeat(value).padEnd(5, '-')
 
@@ -101,24 +129,41 @@ function getRatings(value) {
 function createSection(contentSection) {
     const { title, content } = contentSection
 
-    const titleTag = getTitle(title)
-    let contentTag = getContent(content)
-    const newSection = createNewElement('section', 'hero  is-fullheight')
-    const newContainer = createNewElement('div', 'container')
-    const bodySection = createNewElement('div', 'hero-body')
+    if (title !== 'education' && title !== 'experience') {
+        const titleTag = getTitle(title)
+        let contentTag = getContent(content)
+        const newSection = createNewElement('section', 'hero is-medium')
+        newSection.setAttribute('id', 'section-' + title)
+        const newContainer = createNewElement('div', 'container')
+        const bodySection = createNewElement('div', 'hero-body')
+        const newDiv = createNewElement('div', 'column is-6')
+        const newContent = createNewElement('div', 'column is-6')
 
-    if (title === 'portfolio') {
-        contentTag.classList.add('content-portfolio', 'columns')
+        if (contentSection !== '') {
+            newContainer.append(titleTag, contentTag)
+            if (title === 'portfolio') {
+                contentTag.classList.add('content-portfolio', 'columns')
+                newContainer.classList.add('columns')
+                newDiv.classList.add('title-portfolio', 'is-capitalized')
+                newDiv.append(titleTag)
+                newContent.append(contentTag)
+                newContainer.append(newDiv, newContent)
+            }
+            if (title === 'passions') {
+                contentTag.classList.add('content-passions', 'columns')
+                newContainer.classList.add('is-marginless')
+                // bodySection.classList.add('is-paddingless')
+            }
+            if (title === 'skills') {
+                newSection.style.backgroundColor = '#EDAE49'
+                titleTag.classList.add('has-text-centered')
+            }
+
+            bodySection.append(newContainer)
+            newSection.append(bodySection)
+            return newSection
+        }
     }
-    if (title === 'passions') {
-        contentTag.classList.add('content-skills', 'columns')
-    }
-
-    newContainer.append(titleTag, contentTag)
-    bodySection.append(newContainer)
-    newSection.append(bodySection)
-
-    return newSection
 }
 
 function createNodesFromData(resumes) {

@@ -26,17 +26,17 @@
             {
                 "skill": "front-end",
                 "subskill": {
-                    "html/css/sass": 4,
+                    "html/ css/ sass": 4,
                     "javascript": 3,
-                    "angular/vuejs/react": 2,
+                    "angular/ vuejs/ react": 2,
                     "webpack": 2
                 }
             },
             {
                 "skill": "back-end",
                 "subskill": {
-                    "nodejs/electron": 2,
-                    "php/wordpress": 3,
+                    "nodejs/ electron": 2,
+                    "php/ wordpress": 3,
                     "symfony": 2,
                     "ruby on rails": 1,
                     "java": 1
@@ -68,7 +68,7 @@
             {
                 "skill": "sécurité",
                 "subskill": {
-                    "smsi/pssi/gestion de risque": 2,
+                    "smsi/ pssi/ gestion de risque": 2,
                     "ebios": 2,
                     "owasp": 2,
                     "penstest": 2,
@@ -143,6 +143,6 @@
     },
     {
         "title": "passions",
-        "content": ["yoga hastanga", "natation"]
+        "content": ["../app/img/chuttersnap-G8OyN_tOIwY-unsplash.jpg", "../app/img/rishikesh-yogpeeth-W-ETYNUdFHo-unsplash.jpg"]
     }
 ]
