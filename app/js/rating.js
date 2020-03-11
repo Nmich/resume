@@ -1,10 +1,11 @@
-import newElement from './createNewElement.js'
+import {createNewElement} from './dom-utils.js'
 
 export default
 function getRatings(value) {
-  const yellowStar = () => newElement('span', 'yellow-star fas fa-star')
-  const greyStar = () => newElement('span', 'far fa-star')
+  const yellowStar = () => createNewElement('span', 'yellow-star fas fa-star')
+  const greyStar = () => createNewElement('span', 'far fa-star')
 
+  // @ts-ignore
   const stars = '*'.repeat(value).padEnd(5, '-')
 
   return stars

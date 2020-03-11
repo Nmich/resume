@@ -1,12 +1,11 @@
-import fetchJSON from './fetchJson.js';
-import section from './createSection.js'
-
+import fetchJSON from './fetchJson.js'
+import expSection from './experienceSection.js'
+import { createSection } from './dom-utils.js'
 const dataResumeUrl = '../../datas/resume-datas.json'
-
 
 function createNodesFromData(resumes) {
     return resumes.map(function(resume) {
-        const newDiv = section(resume)
+        const newDiv = createSection(resume)
         return newDiv
     })
 }
@@ -18,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const nodesFromData = createNodesFromData(resumes)
             // console.log(nodesFromData)
             document.body.append(...nodesFromData)
+            // document.getElementById('exp').addEventListener('click', expSection)
         })
         .catch(function(e) {
             console.error(e)
